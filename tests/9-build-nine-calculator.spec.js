@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { basicCalculatorStartPage } = require('../pages/basicCalculatorStartPage')
 const websiteURL = 'https://testsheepnz.github.io/BasicCalculator';
 
-test.describe('Build 9 test suite', () => {
+test.describe('Build nine test suite', () => {
     let page;
   test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
@@ -12,7 +12,7 @@ test.describe('Build 9 test suite', () => {
     await startPage.goto(websiteURL);
     await startPage.selectOption('#selectBuild', '9');
   });
-    test('Test if build 9 calculator works with add positive', async () => {
+    test('Test if addition operation with positive numbers works', async () => {
         await startPage.fill('#number1Field', '2.5');
         await startPage.fill('#number2Field', '2');
         await startPage.selectOption('#selectOperationDropdown', '0');
@@ -21,7 +21,7 @@ test.describe('Build 9 test suite', () => {
         expect(answerContent).toBe('4.5');
     });
 
-    test('Test if build 9 calculator works with add negative', async () => {
+    test('Test if addition operation with negative numbers works', async () => {
       await startPage.fill('#number1Field', '-2.5');
       await startPage.fill('#number2Field', '-2');
       await startPage.selectOption('#selectOperationDropdown', '0');
@@ -30,7 +30,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('-4.5');
   });
 
-    test('Test if build 9 calculator works with add and integer numbers only', async () => {
+    test('Test if addition operation with positive integer numbers works', async () => {
       await startPage.fill('#number1Field', '2.5');
       await startPage.fill('#number2Field', '2');
       await startPage.selectOption('#selectOperationDropdown', '0');
@@ -40,7 +40,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('4');
     });
 
-    test('Test if build 9 calculator works with add negative and integer numbers only', async () => {
+    test('Test if addition operation with negative integer numbers works', async () => {
       await startPage.fill('#number1Field', '-2.5');
       await startPage.fill('#number2Field', '-2');
       await startPage.selectOption('#selectOperationDropdown', '0');
@@ -50,7 +50,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('-4');
     });
 
-    test('Test if build 9 calculator works with subtract', async () => {
+    test('Test if subtraction operation with positive numbers works', async () => {
       await startPage.fill('#number1Field', '2');
       await startPage.fill('#number2Field','1.5');
       await startPage.selectOption('#selectOperationDropdown', '1');
@@ -59,7 +59,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('0.5');
     });
 
-    test('Test if build 9 calculator works with subtract negative', async () => {
+    test('Test if subtraction operation with negative numbers works', async () => {
       await startPage.fill('#number1Field', '-2');
       await startPage.fill('#number2Field','-1.5');
       await startPage.selectOption('#selectOperationDropdown', '1');
@@ -68,7 +68,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('-0.5');
     });
 
-    test('Test if build 9 calculator works with subtract and integer numbers only', async () => {
+    test('Test if subtraction operation with positive integer numbers works', async () => {
       await startPage.fill('#number1Field', '2');
       await startPage.fill('#number2Field','1.5');
       await startPage.selectOption('#selectOperationDropdown', '1');
@@ -78,7 +78,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('0');
     });
 
-    test('Test if build 9 calculator works with subtract negative and integer numbers only', async () => {
+    test('Test if subtraction operation with negative integer numbers works', async () => {
       await startPage.fill('#number1Field', '-2');
       await startPage.fill('#number2Field','-1.5');
       await startPage.selectOption('#selectOperationDropdown', '1');
@@ -88,7 +88,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('0');
     });
 
-    test('Test if build 9 calculator works with multiply', async () => {
+    test('Test if multiply operation with positive numbers works', async () => {
       await startPage.fill('#number1Field', '1.5');
       await startPage.fill('#number2Field', '1.5');
       await startPage.selectOption('#selectOperationDropdown', '2');
@@ -97,7 +97,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('2.25');
     });
 
-    test('Test if build 9 calculator works with multiply negative', async () => {
+    test('Test if multiply operation with negative numbers works', async () => {
       await startPage.fill('#number1Field', '-1.5');
       await startPage.fill('#number2Field', '-1.5');
       await startPage.selectOption('#selectOperationDropdown', '2');
@@ -106,7 +106,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('2.25');
     });
 
-    test('Test if build 9 calculator works with multiply and integer numbers only', async () => {
+    test('Test if multiply operation with positive integer numbers works', async () => {
       await startPage.fill('#number1Field', '1.5');
       await startPage.fill('#number2Field', '1.5');
       await startPage.selectOption('#selectOperationDropdown', '2');
@@ -116,7 +116,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('2');
     });
 
-    test('Test if build 9 calculator works with multiply negative and integer numbers only', async () => {
+    test('Test if multiply operation with negative integer numbers works', async () => {
       await startPage.fill('#number1Field', '-1.5');
       await startPage.fill('#number2Field', '-1.5');
       await startPage.selectOption('#selectOperationDropdown', '2');
@@ -126,7 +126,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('2');
     });
 
-    test('Test if build 9 calculator works with divide', async () => {
+    test('Test if divide operation with positive numbers works', async () => {
       await startPage.fill('#number1Field', '5');
       await startPage.fill('#number2Field', '2');
       await startPage.selectOption('#selectOperationDropdown', '3');
@@ -135,7 +135,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('2.5');
     });
 
-    test('Test if build 9 calculator works with divide negative', async () => {
+    test('Test if divide operation with negative numbers works', async () => {
       await startPage.fill('#number1Field', '-5');
       await startPage.fill('#number2Field', '-2');
       await startPage.selectOption('#selectOperationDropdown', '3');
@@ -144,7 +144,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('2.5');
     });
 
-    test('Test if build 9 calculator works with divide and integer numbers only', async () => {
+    test('Test if divide operation with positive integer numbers works', async () => {
       await startPage.fill('#number1Field', '5');
       await startPage.fill('#number2Field', '2');
       await startPage.selectOption('#selectOperationDropdown', '3');
@@ -154,7 +154,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('2');
     });
 
-    test('Test if build 9 calculator works with divide negative and integer numbers only', async () => {
+    test('Test if divide operation with negative integer numbers works', async () => {
       await startPage.fill('#number1Field', '-5');
       await startPage.fill('#number2Field', '-2');
       await startPage.selectOption('#selectOperationDropdown', '3');
@@ -164,7 +164,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('2');
     });
 
-    test('Test if build 9 calculator works with concatenate', async () => {
+    test('Test if concatenate operation works', async () => {
       await startPage.fill('#number1Field', '2');
       await startPage.fill('#number2Field', '2');
       await startPage.selectOption('#selectOperationDropdown', '4');
@@ -173,7 +173,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('22');
     });
 
-    test('Test if build 9 calculator works with add and symbol', async () => {
+    test('Test if addition operation with symbols work', async () => {
       await startPage.fill('#number1Field', '2a');
       await startPage.fill('#number2Field', 'b');
       await startPage.selectOption('#selectOperationDropdown', '0');
@@ -182,7 +182,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('NaN');
     });
 
-    test('Test if build 9 calculator works with subtract and symbol', async () => {
+    test('Test if subtraction operation with symbol works', async () => {
       await startPage.fill('#number1Field', '2a');
       await startPage.fill('#number2Field', 'b');
       await startPage.selectOption('#selectOperationDropdown', '1');
@@ -191,7 +191,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('NaN');
     });
 
-    test('Test if build 9 calculator works with multiply and symbol', async () => {
+    test('Test if multiply operation with symbol works', async () => {
       await startPage.fill('#number1Field', '2a');
       await startPage.fill('#number2Field', 'b');
       await startPage.selectOption('#selectOperationDropdown', '2');
@@ -200,7 +200,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('NaN');
     });
 
-    test('Test if build 9 calculator works with divide and symbol', async () => {
+    test('Test if divide operation with symbol works', async () => {
       await startPage.fill('#number1Field', '2a');
       await startPage.fill('#number2Field', 'b');
       await startPage.selectOption('#selectOperationDropdown', '3');
@@ -209,7 +209,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('NaN');
     });
 
-    test('Test if build 9 calculator works with concatenate and symbol', async () => {
+    test('Test if concatenate operation with symbol works', async () => {
       await startPage.fill('#number1Field', '2a');
       await startPage.fill('#number2Field', 'b');
       await startPage.selectOption('#selectOperationDropdown', '4');
@@ -218,7 +218,7 @@ test.describe('Build 9 test suite', () => {
       expect(answerContent).toBe('NaN');
     });
 
-    test('Test if build 9 calculator clear button works', async () => {
+    test('Test if clear button works', async () => {
       await startPage.fill('#number1Field', '2.5');
       await startPage.fill('#number2Field', '2');
       await startPage.selectOption('#selectOperationDropdown', '0');
