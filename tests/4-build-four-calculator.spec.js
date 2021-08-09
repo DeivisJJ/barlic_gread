@@ -40,7 +40,7 @@ test.describe('Build four test suite', () => {
       expect(answerContent).toBe('4');
     });
 
-    test('Test if addition operation with negative integer numbers works', async () => {
+    test.only('Test if addition operation with negative integer numbers works', async () => {
       await startPage.fill('#number1Field', '-2.5');
       await startPage.fill('#number2Field', '-2');
       await startPage.selectOption('#selectOperationDropdown', '0');
@@ -78,7 +78,7 @@ test.describe('Build four test suite', () => {
       expect(answerContent).toBe('0');
     });
 
-    test('Test if subtraction operation with negative integer numbers works', async () => {
+    test.only('Test if subtraction operation with negative integer numbers works', async () => {
       await startPage.fill('#number1Field', '-2');
       await startPage.fill('#number2Field','-1.5');
       await startPage.selectOption('#selectOperationDropdown', '1');
@@ -116,7 +116,7 @@ test.describe('Build four test suite', () => {
       expect(answerContent).toBe('2');
     });
 
-    test('Test if multiply operation with negative integer numbers works', async () => {
+    test.only('Test if multiply operation with negative integer numbers works', async () => {
       await startPage.fill('#number1Field', '-1.5');
       await startPage.fill('#number2Field', '-1.5');
       await startPage.selectOption('#selectOperationDropdown', '2');
@@ -154,7 +154,7 @@ test.describe('Build four test suite', () => {
       expect(answerContent).toBe('2');
     });
 
-    test('Test if divide operation with negative integer numbers works', async () => {
+    test.only('Test if divide operation with negative integer numbers works', async () => {
       await startPage.fill('#number1Field', '-5');
       await startPage.fill('#number2Field', '-2');
       await startPage.selectOption('#selectOperationDropdown', '3');
@@ -164,7 +164,7 @@ test.describe('Build four test suite', () => {
       expect(answerContent).toBe('2');
     });
 
-    test('Test if concatenate operation works', async () => {
+    test.only('Test if concatenate operation works', async () => {
       await startPage.fill('#number1Field', '2');
       await startPage.fill('#number2Field', '2');
       await startPage.selectOption('#selectOperationDropdown', '4');
